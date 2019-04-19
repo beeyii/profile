@@ -61,20 +61,14 @@
         </header>
         <main id = "jump">
             <button onclick="typeWriter()">About Brian</button>
-            <h2 id="h_brian"></h2>
+            <h2 id="h_brian">Hi, my name is Brian Yi!</h2>
             <p id="p_index"></p>
             <p id="p2_index"></p>
             <script>
-                var x = y = z = 0;
-                var h_txt = "Hi, my name is Brian Yi!";
+                var y = z = 0;
                 var p_txt = "I am a United States Navy Veteran.";
                 var p2_txt = 'I am a senior at the University of Michigan studying Informatics and Applied Statistics.';
                 function typeWriter() {
-                    if (x < h_txt.length) {
-                        document.getElementById("h_brian").innerHTML += h_txt.charAt(x);
-                        x++;
-                        setTimeout(typeWriter, 150);
-                    }
                     if (y < p_txt.length) {
                         document.getElementById("p_index").innerHTML += p_txt.charAt(y);
                         y++;
