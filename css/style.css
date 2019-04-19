@@ -185,7 +185,7 @@ p.p_general::first-letter {
     font-size: 150%;
 }
 
-.p_index{
+#p_index #p2_index{
     margin: 0 auto; /* makes the div centered */
     width: 75%;
     padding: 1%;
