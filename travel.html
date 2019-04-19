@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Travel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="images/icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+
+        <style>
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            [class*="nav_bar"] {
+                margin: 0 auto;
+                width: 100%;
+            }
+            #nav_bar {
+                overflow: hidden;
+                background-color: #082943;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            .sticky + .p_navy {
+                padding-top: 60px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a id="top"></a>
+        <header class="header">
+            <a href = "#jump" class = "skip" tabindex = "0">Skip to Content</a>
+            <img src="images/header_logo.png" alt="anchor with Brian Yi's description">
+            <div class = "navbar">
+                <nav class="nav_bar_m nav_bar">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="education.html">Education</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="navy.html">Navy</a>
+                    <a href="travel.html" class="current"><img class="nav_img" src="images/nav_icon.png" alt="anchor with Brian Yi's description">Travel</a>
+                    <a href="contact.html">Contact Me</a>
+                </nav>
+            </div>
+            <div class="intro">
+                <h1 class="h_intro">
+                    “The world is a book and those who do not travel read only one page.” - St. Augustine
+                </h1>
+            </div>
+        </header>
+        <main id = "jump">
+            <div class="video">
+                <video class="video_player viewer" src="images/Last_Deployment.mp4" controls></video>
+                <div class="ctrl">
+                    <div class="progress">
+                        <div class="progress_filled"></div>
+                    </div>
+                    <button class="player_button toggle" title="Toggle Play">►</button>
+                </div>
+            </div> 
+
+            <div class="container_grid">
+                <a class="pics" target="blank" href="images/yokohama.jpg"><img src="images/yokohama.jpg" alt="image of Yokohama"></a>
+                <a class="pics" target="blank" href="images/tokyo_disney.jpg"><img src="images/tokyo_disney.jpg" alt="image of Disneysea in Tokyo"></a>
+                <a class="pics" target="blank" href="images/disneysea.jpg"><img src="images/disneysea.jpg" alt="image at Disneysea with friend"></a>
+                <p>
+                    Pictures of Yokohama during winter and visiting Disney Sea in Tokyo with my friend before he leave Japan.
+                </p>
+                <a class="pics" target="blank" href="images/iwojima_fake_ship.jpg"><img src="images/iwojima_fake_ship.jpg" alt="image of Iwojima beach"></a>
+                <a class="pics" target="blank" href="images/iwojima_fake_ship2.jpg"><img src="images/iwojima_fake_ship2.jpg" alt="image of Iwojima fake ships"></a>
+                <a class="pics" target="blank" href="images/iwojima_fake_ship3.jpg"><img src="images/iwojima_fake_ship3.jpg" alt="image of Iwojima fake ships"></a>
+                <p>
+                    During World War II United built these fake ships on the island of Iwojim to make it seem like we had more force.
+                </p>
+                <a class="pics" target="blank" href="images/elementary_school_korea.jpg"><img src="images/elementary_school_korea.jpg" alt="image of my elementary school in Korea"></a>
+                <a class="pics" target="blank" href="images/old_neighborhood.jpg"><img src="images/old_neighborhood.jpg" alt="image of my neighborhood in Korea"></a>
+                <a class="pics" target="blank" href="images/grandpas_grave.jpg"><img src="images/grandpas_grave.jpg" alt="image of grandpas cemetary"></a>
+                <p>
+                    Pictures of my elementary school that I attended while growing up in Ilsan, South Korea 
+                    and picture of the cementary where my grandpa is buried.
+                </p>
+                <a class="pics" target="blank" href="images/big_house.jpg"><img src="images/big_house.jpg" alt="image of my brother and me at the Big House"></a>
+                <a class="pics" target="blank" href="images/um_campus.jpg"><img src="images/um_campus.jpg" alt="image of the Michigan campus"></a>
+                <a class="pics" target="blank" href="images/state_st.jpg"><img src="images/state_st.jpg" alt="image of state st in Ann Arbor"></a>
+                <p>
+                    One of the most beautiful and awesome places in the United States and my soon to be alma mater the University of Michigan campus. 
+                    Go Blue!<img src="images/michigan_icon.png" alt="image of Michigan M">
+                </p>
+            </div>
+        </main> 
+        <script src="js/index.js"></script>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.querySelector(".navbar");
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+                } else {
+                navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+        <footer class="foot">
+            <a href="#top">Back to Top</a>
+        </footer>
+    </body>
+</html>
+
+<!-- add reduce motion for response design -->

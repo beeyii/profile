@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+        <style>
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            [class*="nav_bar"] {
+                margin: 0 auto;
+                width: 100%;
+            }
+            #nav_bar {
+                overflow: hidden;
+                background-color: #082943;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            .sticky + .p_navy {
+                padding-top: 60px;
+            }
+
+            .errorMsg { 
+                color:red;
+                display: none; 
+                line-height: 50px;
+                font-family: fantasy;
+            } 
+            .div_form {
+                margin: 0 auto;
+                width: 40%;
+                text-align: left;
+                padding-top: 2%;
+                padding-bottom: 5%;
+            }
+            input {
+                display: block;
+                width: 100%;
+            }
+            .submit {
+                align-self: center;
+                width: auto;
+            }
+        </style>
+        <script>
+            function checkForm(){
+                var inputs = [];
+                inputs[0] = document.getElementById("name");
+                inputs[1] = document.getElementById("employer");
+                console.log(inputs[0])
+            
+                if (inputs[0].value === "" && inputs[1].value === "") {
+                    document.getElementById("nameError").innerHTML; 
+                    document.getElementById("nameError").style.display = "block";
+                    document.getElementById("comError").innerHTML; 
+                    document.getElementById("comError").style.display = "block";
+                    return false;
+                }
+                else if (inputs[0].value === "") {
+                    document.getElementById("nameError").innerHTML; 
+                    document.getElementById("nameError").style.display = "block";
+                    document.getElementById("comError").style.display = "none";
+                    return false;
+                }
+                else if (inputs[1].value === "") {
+                    document.getElementById("comError").innerHTML; 
+                    document.getElementById("comError").style.display = "block";
+                    document.getElementById("nameError").style.display = "none";
+                    return false;
+                }
+                else {
+                    document.getElementById("nameError").style.display = "none";
+                    document.getElementById("comError").style.display = "none";
+                    return true;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <a id="top"></a>
+        <header class="header">
+            <a href = "#jump" class = "skip" tabindex = "0">Skip to Content</a>
+            <img src="images/header_logo.png" alt="anchor with Brian Yi's description">
+            <div class = "navbar">
+                <nav class="nav_bar_m nav_bar">
+                    <a href = "index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="education.html">Education</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="navy.html">Navy</a>
+                    <a href="travel.html">Travel</a>
+                    <a href="contact.html" class="current"><img class="nav_img" src="images/nav_icon.png" alt="anchor with Brian Yi's description">Contact Me</a>
+                </nav>
+            </div>
+            <div class="intro">
+                <h1 class="h_intro">
+                    "Networking is not about just connecting people. 
+                    It’s about connecting people with people, people with ideas, and people with opportunities." 
+                    - Michele Jennae
+                </h1>
+            </div>
+        </header> 
+        <main id = "jump">
+            <div class="callout">
+                <div class="callout_h">Get Connected</div>
+                <span class="close" onclick="this.parentElement.style.display='none';">x;</span>
+                <div class="callout_container">
+                    <p>If you would like to get connected:</p>
+                    <p class="p_links">
+                        <a href="https://www.linkedin.com/in/brianyi22/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.github.com/beeyii"><i class="fab fa-github"></i></a>
+                    </p>
+                </div>
+            </div>
+            <h2 class="h_general">
+                Hiring?
+            </h2>    
+            <p class="p_contact">
+                Looking to hire a highly qualified United States Navy Veteran with a Bachelor's Science in Informatics?
+                <br>
+                Please send me an email or connect with me on LinkedIn.
+            </p> 
+
+            <div class="div_form">
+                <form id = "hire_form" action="https://formspree.io/brianyi@umich.edu" method="POST" onsubmit="return checkForm();"> 
+                    <!-- Make sure you push to github if not you won't receive the forms when they submit -->
+                    <label>Name: <input type="text" id="name" placeholder="First Last"></label>
+                    <p class="errorMsg" id="nameError">Please enter your name above!</p>
+                    <label>Email: <input type="email" id="email1" placeholder="johndoe@gmail.com"></label>
+                    <label>Email (confirm): <input type="email" id="email2" placeholder="johndoe@gmail.com"></label>
+                    <label>Company: <input type="text" id="employer"></label>
+                    <p class="errorMsg" id="comError">Please enter the company name above!</p>
+                    <!-- <input type="text" name="message" class="message"> -->
+                    <label>Message: 
+                        <br>
+                    <textarea rows="4" cols="30" name="comment" form="hire_form" placeholder="Enter message here..."></textarea>
+                    </label>
+                    <input type="submit" value="Send" class="submit">
+                </form>
+
+            </div>
+            <!-- <p class="p_links">
+                <a href="https://www.linkedin.com/in/brianyi22/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.github.com/beeyii"><i class="fab fa-github"></i></a>
+            </p> -->
+        </main>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.querySelector(".navbar");
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+                } else {
+                navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+        <footer class="foot">
+            <a href="#top">Back to Top</a>
+        </footer>
+    </body>
+</html>
