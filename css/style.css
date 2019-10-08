@@ -212,16 +212,6 @@ p.p_general::first-letter {
     box-shadow: 2px 2px #888888;
 }
 
-.ul_head{
-    margin: 0 auto;
-    padding-bottom: 2%;
-    width: 80%;
-    text-align: center;
-    /* font-style: italic; */
-    font-weight: bold;
-    color: aliceblue;
-}
-
 .li_edu {
     margin: 0 auto; /* makes the div centered */
     width: 78%;
