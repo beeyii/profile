@@ -133,8 +133,8 @@ a{
 }
 
 .container_flexbox img{
-    width: 50vmin;
-    height: 35vmin;
+    width: 35vmin;
+    height: 50vmin;
 }
 
 .container_grid {
