@@ -210,7 +210,16 @@ p.p_general::first-letter {
     font-weight: bold;
     color: aliceblue;
     box-shadow: 2px 2px #888888;
-    list-style-type: none;
+}
+
+.ul_head{
+    margin: 0 auto;
+    padding-bottom: 2%;
+    width: 80%;
+    text-align: center;
+    /* font-style: italic; */
+    font-weight: bold;
+    color: aliceblue;
 }
 
 .li_edu {
